@@ -1,11 +1,12 @@
+import html  from "../components/main.html?raw";
 /**
  * 
  * @param {elementHTML} elementId String
  */
 export const App = (elementId) => {
     (() => {
-        const app = document.createElement('h1');
-        app.innerText = 'Fundamentos de JS';
+        const app = document.createElement('div');
+        app.innerHTML = html;
         document.querySelector(elementId).append(app);
     })();
 }
